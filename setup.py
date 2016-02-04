@@ -6,6 +6,9 @@ setup(
     packages=find_packages("src"),
     package_dir={"": "src"},
     setup_requires=["cffi>=1.0.0"],
-    install_requires=["cffi>=1.0.0"],
+    install_requires=[
+        "cffi>=1.0.0",
+        "numba>=0.23",
+    ],
     cffi_modules=["src/_cffi_src/build_hyper.py:ffi"],
 )
