@@ -8,12 +8,12 @@ from cffi import FFI
 
 # Source: https://github.com/pyca/cryptography/blob/1.2.x/src/_cffi_src/
 with open(os.path.join(
-    os.path.dirname(__file__), "cephes_src/cephesx.h"
+    os.path.dirname(__file__), "cephesx_src/cephesx.h"
 )) as f:
     types = f.read()
 
 with open(os.path.join(
-    os.path.dirname(__file__), "cephes_src/hyp2f1x.c"
+    os.path.dirname(__file__), "cephesx_src/hyp2f1x.c"
 )) as f:
     functions = f.read()
 
