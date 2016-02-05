@@ -1,22 +1,27 @@
 # coding: utf-8
 
-from cffi import FFI
-ffi = FFI()
+import os.path
 
+from cffi import FFI
+
+
+with open(os.path.join(
+    os.path.dirname(__file__), "cephes_src/cephesx.h"
+)) as f:
+    types = f.read()
+
+with open(os.path.join(
+    os.path.dirname(__file__), "cephes_src/hyp2f1x.c"
+)) as f:
+    functions = f.read()
+
+ffi = FFI()
 ffi.cdef(
-    """
-double hyp2f1x ( double a, double b, double c, double x );
-"""
+    types
 )
 ffi.set_source(
     "_hyper",
-    """
-double hyp2f1x ( a, b, c, x )
-double a, b, c, x;
-{
-    return 1.0;
-}
-"""
+    functions
 )
 
 
