@@ -1,13 +1,14 @@
 import pytest
 
 import numpy as np
-from numpy.testing import assert_array_almost_equal, assert_almost_equal
+from numpy.testing import (
+    assert_array_almost_equal, assert_almost_equal
+)
 from scipy import special
 
 from hyper import hyper
 
 
-@pytest.mark.xfail
 def test_hyp2f1_battin_scalar():
     x = np.linspace(0, 1, num=11)
     expected_res = special.hyp2f1(3, 1, 5/2, x)

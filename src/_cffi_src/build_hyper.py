@@ -6,24 +6,17 @@ import os.path
 from cffi import FFI
 
 
-# Source: https://github.com/pyca/cryptography/blob/1.2.x/src/_cffi_src/
-with open(os.path.join(
-    os.path.dirname(__file__), "cephesx_src/cephesx.h"
-)) as f:
-    types = f.read()
-
-with open(os.path.join(
-    os.path.dirname(__file__), "cephesx_src/hyp2f1x.c"
-)) as f:
-    functions = f.read()
-
 ffi = FFI()
-ffi.cdef(
-    types
+ffi.cdef("""
+double hyp2f1 ( double a, double b, double c, double x );
+"""
 )
 ffi.set_source(
     "_hyper",
-    functions
+    """
+double hyp2f1 ( double a, double b, double c, double x );
+""",
+    libraries=["md"],
 )
 
 

@@ -1,0 +1,18 @@
+package:
+  name: cephes
+  version: "2014.10.04"
+
+source:
+  fn: double.zip
+  url: http://www.moshier.net/double.zip
+  sha1: 54e3d1bdfd29b7506042707fa65258afa37e5f39
+  patches:
+    - fix_makefile.diff
+
+build:
+  number: 1
+
+about:
+  home: http://www.netlib.org/cephes/
+  license: Public Domain
+  summary: "Cephes C and C++ language special functions math library"
