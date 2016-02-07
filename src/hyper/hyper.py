@@ -12,6 +12,13 @@ _vd_hyp2f1 = lib.vd_hyp2f1
 
 @njit
 def hyp2f1(a, b, c, x):
+    """Gauss hypergeometric function 2F1.
+
+    Parameters
+    ----------
+    a, b, c, x : float
+
+    """
     if x == 1.0:
         return np.inf
 
@@ -20,6 +27,15 @@ def hyp2f1(a, b, c, x):
 
 @njit
 def vd_hyp2f1(a, b, c, x):
+    """
+    Gauss hypergeometric function 2F1 vectorized for float x.
+
+    Parameters
+    ----------
+    a, b, c : float
+    x : array
+
+    """
     res = np.empty_like(x)
     _vd_hyp2f1(
             len(x), a, b, c,
