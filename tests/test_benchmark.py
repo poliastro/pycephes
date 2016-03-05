@@ -2,7 +2,7 @@ import pytest
 
 from scipy import special
 
-from hyper import hyper
+from pycephes import hyper
 
 
 def test_scipy_special(benchmark):

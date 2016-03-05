@@ -6,7 +6,7 @@ from numpy.testing import (
 )
 from scipy import special
 
-from hyper import hyper
+from pycephes import hyper
 
 
 def test_hyp2f1_battin_scalar():

@@ -1,5 +1,5 @@
 # coding: utf-8
-from hyper import hyper
+from pycephes import hyper
 from numba import jit
 
 
