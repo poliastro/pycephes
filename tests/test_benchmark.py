@@ -1,5 +1,3 @@
-import pytest
-
 from scipy import special
 
 from pycephes import hyper
