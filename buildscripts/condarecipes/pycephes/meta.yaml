@@ -1,10 +1,10 @@
 package:
   name: pycephes
-  version: "0.1.dev0"
+  version: "0.1.0"
 
 source:
   git_url: https://github.com/poliastro/pycephes
-  git_tag: master
+  git_tag: v0.1.0
 
 build:
   number: 1

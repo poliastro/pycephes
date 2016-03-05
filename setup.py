@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pycephes",
-    version="0.1.dev0",
+    version="0.1.0",
     packages=find_packages("src"),
     package_dir={"": "src"},
     setup_requires=["cffi>=1.0.0"],
