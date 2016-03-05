@@ -32,6 +32,22 @@ and all contributions are welcome (see `Contributing`_).
 
 .. _`poliastro`: https://github.com/poliastro/poliastro
 
+Performance
+-----------
+
+The motivation for creating this project is mainly achieving a good
+performance. Time benchmarks are included in the ``tests/`` directory
+which can be run using `pytest-benchmark`_.
+
+.. _`pytest-benchmark`: https://github.com/ionelmc/pytest-benchmark
+
+Preliminary studies suggest that pycephes can be nearly **5 times faster**
+on average than the equivalent SciPy function.
+
+.. image:: benchmark.png
+   :alt: Time benchmarks
+   :align: center
+
 Requirements
 ============
 
