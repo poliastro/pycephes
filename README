@@ -8,7 +8,7 @@ pycephes
 :Author: Juan Luis Cano Rodríguez <juanlu001@gmail.com>
 :Version: 0.1.dev0
 
-.. |license| image:: https://img.shields.io/github/license/poliastro/pycephes.svg?style=flat-square
+.. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
    :target: https://github.com/poliastro/pycephes/raw/master/COPYING
 
 .. |mailing| image:: https://img.shields.io/badge/mailing%20list-groups.io-8cbcd1.svg?style=flat-square
