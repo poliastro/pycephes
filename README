@@ -1,0 +1,119 @@
+.. pycephes
+
+pycephes
+========
+
+:Name: pycephes
+:Website: https://github.com/poliastro/pycephes
+:Author: Juan Luis Cano Rodríguez <juanlu001@gmail.com>
+:Version: 0.1.dev0
+
+.. |license| image:: https://img.shields.io/github/license/poliastro/pycephes.svg?style=flat-square
+   :target: https://github.com/poliastro/pycephes/raw/master/COPYING
+
+.. |mailing| image:: https://img.shields.io/badge/mailing%20list-groups.io-8cbcd1.svg?style=flat-square
+   :target: https://groups.io/g/poliastro-dev
+
+|license| |mailing|
+
+pycephes is a thin Python wrapper for the `CEPHES mathematical library`_
+from Netlib, written using `CFFI`_ and easy to use with `numba`_.
+It is released under the MIT license, hence allowing commercial use.
+
+.. _`CEPHES mathematical library`: http://www.netlib.org/cephes/
+.. _`CFFI`: http://cffi.readthedocs.org/
+.. _`numba`: http://numba.pydata.org/
+
+At present it only interfaces a single hypergeometric function, but
+is provided here both as a proof of concept of the power of
+CFFI + numba and as a support for `poliastro`_, a Python library
+for interplanetary Astrodynamics. It is therefore a work in progress,
+and all contributions are welcome (see `Contributing`_).
+
+.. _`poliastro`: https://github.com/poliastro/poliastro
+
+Requirements
+============
+
+pycephes requires the following Python packages:
+
+* NumPy, for basic array handling
+* CFFI, for interfacing with C code
+* numba, to make it compatible with upstream jitted functions
+
+In addition, the CEPHES mathematical library must be present on the system.
+
+Installation
+============
+
+The easiest and fastest way to get the package up and running is to
+install pycephes using `conda <http://conda.io>`_. This also installs
+the CEPHES package as a dependency::
+
+  $ conda install pycephes --channel poliastro
+
+It can be installed from PyPI too, provided that the CEPHES library
+is present on the system::
+
+  $ pip install pycephes
+
+You can also `download pycephes source from GitHub`_ and type::
+
+  $ pip install .
+
+Development installations are supported as well::
+
+  $ pip install -e .
+
+.. _`install poliastro from PyPI`: https://pypi.python.org/pypi/pycephes/
+.. _`download pycephes source from GitHub`: http://github.com/poliastro/pycephes
+
+.. warning::
+
+    It is recommended that you **never ever use sudo** with distutils, pip,
+    setuptools and friends in Linux because you might seriously break your
+    system [1_][2_][3_][4_]. Options are `virtualenvs`_
+    or `local installations`_.
+
+.. _1: https://wiki.python.org/moin/CheeseShopTutorial#Python.27s_distutils
+.. _2: http://stackoverflow.com/questions/4314376/how-can-i-install-a-python-egg-file/4314446#comment4690673_4314446
+.. _3: http://workaround.org/easy-install-debian
+.. _4: http://matplotlib.1069221.n5.nabble.com/Why-is-pip-not-mentioned-in-the-Installation-Documentation-tp39779p39812.html
+
+.. _`virtualenvs`: http://pypi.python.org/pypi/virtualenv
+.. _`local installations`: http://stackoverflow.com/a/4325047/554319
+
+Contributing
+============
+
+One obvious area of improvement for the library consists in adding more
+functions. Some other ideas:
+
+* Create some script to generate the function headers so they don't have
+  to be added manually.
+* Use the ``@generated_jit`` feature `introduced in numba 0.24`_ to
+  automatically trigger the appropriate function depending on the dimension
+  of the inputs, à la Julia.
+
+.. _`introduced in numba 0.24`: http://numba.pydata.org/numba-doc/0.24.0/release-notes.html#version-0-24-0
+
+Potential contributors are encouraged to fork the repository and open a pull request.
+
+Support
+=======
+
+|mailing|
+
+You can post support questions regarding pycephes on the
+`poliastro mailing list`_ or the `pycephes issue tracker`_.
+
+.. _`poliastro mailing list`: https://groups.io/g/poliastro-dev
+.. _`pycephes issue tracker`: https://github.com/poliastro/pycephes/issues
+
+License
+=======
+
+|license|
+
+pycephes is released under the MIT license, hence allowing commercial
+use of the library. Please refer to the COPYING file.
