@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pycephes",
-    version="0.1.0",
+    version="0.2.dev0",
     description="Python wrapper for CEPHES using CFFI and numba",
     author="Juan Luis Cano",
     author_email="hello@juanlu.space",

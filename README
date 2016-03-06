@@ -6,7 +6,7 @@ pycephes
 :Name: pycephes
 :Website: https://github.com/poliastro/pycephes
 :Author: Juan Luis Cano Rodríguez <juanlu001@gmail.com>
-:Version: 0.1.0
+:Version: 0.2.dev0
 
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
    :target: https://github.com/poliastro/pycephes/raw/master/COPYING
