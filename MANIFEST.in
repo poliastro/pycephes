@@ -1,0 +1,6 @@
+include benchmark.png
+
+include README.rst
+include COPYING
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib
