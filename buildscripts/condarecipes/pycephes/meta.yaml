@@ -1,0 +1,33 @@
+package:
+  name: pycephes
+  version: "0.1.dev0"
+
+source:
+  git_url: https://github.com/poliastro/pycephes
+  git_tag: master
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - cephes ==2014.10.04
+    - cffi >=1.0.0
+
+  run:
+    - python
+    - cephes ==2014.10.04
+    - cffi >=1.0.0
+    - numpy
+    - numba >=0.23
+
+test:
+  requires:
+    - pytest
+    - scipy
+
+about:
+  home: http://www.netlib.org/cephes/
+  license: Public Domain
+  summary: "Cephes C and C++ language special functions math library"
