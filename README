@@ -3,6 +3,10 @@
 pycephes
 ========
 
+.. image:: http://unmaintained.tech/badge.svg
+:target: http://unmaintained.tech/
+:alt: No Maintenance Intended 
+
 :Name: pycephes
 :Website: https://github.com/poliastro/pycephes
 :Author: Juan Luis Cano Rodríguez <juanlu001@gmail.com>
@@ -15,6 +19,9 @@ pycephes
    :target: https://groups.io/g/poliastro-dev
 
 |license| |mailing|
+
+*Note*: This was a (successful) proof of concept but it's not maintained anymore.
+Please check out projects like https://github.com/limix/ncephes.
 
 pycephes is a thin Python wrapper for the `CEPHES mathematical library`_
 from Netlib, written using `CFFI`_ and easy to use with `numba`_.
